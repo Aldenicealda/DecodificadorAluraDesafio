@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/encryption.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Criptografe seu texto</title>
+</head>
+<body>
+    <main>
+        <div>
+            <button id="button-mode" onclick="toggleMode()"><span class="material-symbols-outlined" id="button-mode-icon">dark_mode</span></button>
+        </div>
+        <section class="decodificador">
+            <textarea type="text" class="decodificador__texto" placeholder="Digite seu texto"></textarea>
+            <div class="decodificador__info">
+                <span class="material-symbols-outlined">info</span>
+                <p>Use letras minúsculas e sem acento.</p>
+            </div>
+            <div class="decodificador__botoes">
+                <button class="decodificador__botao criptografa" onclick="criptografar()">Criptografar</button>
+                <button class="decodificador__botao descriptografa" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <div class="preresultado">
+                <img src="./assets/procurando.svg" alt="desenho de um boneco com uma lupa, como se estivesse procurando." class="preresultado__imagem">
+                <div class="preresultado__info">
+                    <h2 class="preresultado__subtitulo">Nenhuma mensagem encontrada</h2>
+                    <p class="preresultado__texto">Digite o texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
+            <div class="posresultado">
+                <p class="posresultado__texto"></p>
+                <button class="decodificador__botao copia" id="btn_copiar" onclick="copiarResultado()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Projeto One Alura</p>
+    </footer>
+    <script src="./js/index.js" defer></script>
+</body>
+</html>
